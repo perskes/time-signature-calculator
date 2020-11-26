@@ -1,11 +1,6 @@
-# time-signature-calculator
-Calculate how many 4ths, 8ths, ... notes fit into your meassure in any Time-Signature
-
-
-
 ### Description
 
-time-signature-calculator is a simple function to calculate how many notes fit into any (simple, compound is untested and wont work) time signature.
+time-signature-calculator is a simple function to calculate how many notes fit into any (simple only, compound is untested and wont work) time signature.
 
 ### How to use it
 
@@ -14,7 +9,7 @@ Tweak the array `myNotes` and put in custom note-values, or feed the array into 
 The example array consists of 2 quarter notes, 4 sixteenth notes and 2 eighth notes, adding up to exactly one measure in a 4/4 Time Signature.
 `var myNotes = [4, 4, 16, 16, 16, 16, 8, 8]`
 
-The percentage of the note-values will be calculated and the time-signature will be used as a reference for 100%. The calculated values will be added to the currentPercentage variable until it is (approx., see floating point operations for more details) 100%.
+The percentage of the [note values](https://en.wikipedia.org/wiki/Note_value "note values") will be calculated and the [time signature](http://https://en.wikipedia.org/wiki/Time_signature#:~:text=The%20time%20signature%20(also%20known,is%20equivalent%20to%20a%20beat. "time signature") will be used as a reference for 100%. The calculated values will be added to the `currentPercentage` variable until it is (**approx**., see [floating point operations](https://stackoverflow.com/a/16082201 "floating point operations") for more details) 100%.
 
 Handle the result as desired, the function does not treat the two possible results:
 
@@ -41,6 +36,32 @@ Handle the result as desired, the function does not treat the two possible resul
     8 is 12.5% of 100%. Current usage of measure is: 87.5
     check @ 88
     8 is 12.5% of 100%. Current usage of measure is: 100
+
+Another example:
+
+    measure("12/8")
+    check @ 0
+    4 is 16.666666666666664% of 100%. Current usage of measure is: 16.666666666666664
+    check @ 17
+    4 is 16.666666666666664% of 100%. Current usage of measure is: 33.33333333333333
+    check @ 34
+    16 is 4.166666666666666% of 100%. Current usage of measure is: 37.49999999999999
+    check @ 38
+    16 is 4.166666666666666% of 100%. Current usage of measure is: 41.66666666666666
+    check @ 42
+    16 is 4.166666666666666% of 100%. Current usage of measure is: 45.83333333333332
+    check @ 46
+    16 is 4.166666666666666% of 100%. Current usage of measure is: 49.999999999999986
+    check @ 50
+    8 is 8.333333333333332% of 100%. Current usage of measure is: 58.333333333333314
+    check @ 59
+    8 is 8.333333333333332% of 100%. Current usage of measure is: 66.66666666666664
+    check @ 67
+    4 is 16.666666666666664% of 100%. Current usage of measure is: 83.33333333333331
+    check @ 84
+    4 is 16.666666666666664% of 100%. Current usage of measure is: 99.99999999999997
+
+
 
 Feel free to leave a message or create an issue, this is not under development, but it's a good starting point for like-minded people looking for a shortcut.
 
