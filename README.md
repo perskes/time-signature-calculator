@@ -67,7 +67,7 @@ Feel free to leave a message or create an issue, this is not under development, 
 
     MIT License
     
-    Copyright (c) [2020] [Sebastian Perske]
+    Copyright (c) 2020 Sebastian Perske
     
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
